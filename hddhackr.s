@@ -721,7 +721,7 @@ removespaces:
    inc di
    jmp removespaces
 
-startserzooi
+startserzooi:
 
         mov dx, di                      ; save number of spaces to dx
    mov word [serialpos], 0
@@ -825,8 +825,8 @@ sourcechecked:            ;Now check if there is enough space for the serial
    cmp ax, dx         ;dx now contains the needed length
    JA serialisok
 
-serrerr
-        mov     ah, 9              ;if not, display error and exit
+serrerr:
+   mov     ah, 9              ;if not, display error and exit
    mov     dx, noserspacestring
    int     0x21
    jmp exit
@@ -1520,7 +1520,7 @@ SEND_cfgsect_ATA:
 ; Al = features
 
 
-send_Get_sector
+send_Get_sector:
 
    mov    DX, [basereg]
 
