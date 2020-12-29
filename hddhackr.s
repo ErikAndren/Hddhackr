@@ -807,7 +807,7 @@ serspac:
 
    cmp cx, 20
    jne nok
-   jmpFatalerrorstring      ; Source contains ONLY spaces, this aint good !!
+   jmp Fatalerrorstring      ; Source contains ONLY spaces, this aint good !!
 nok:
    mov bx, s16serial
    add bx, cx
@@ -1350,7 +1350,7 @@ DRQOK7:
 
    cmp al, 0x58
    jz   DRQOK8
-   jmpDRQERR
+   jmp DRQERR
 DRQOK8:
 
    mov     cx, 0
