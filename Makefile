@@ -1,4 +1,4 @@
-hddhackr:
+hddhackr: hddhackr.s
 	nasm hddhackr.s
 
 clean:
